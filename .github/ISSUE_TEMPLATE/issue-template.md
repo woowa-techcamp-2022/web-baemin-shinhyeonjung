@@ -1,14 +1,11 @@
 ---
 name: issue template
-about: issue template
-title: ''
-labels: ''
-assignees: ''
-
+about: my issue template
+title: ""
+labels: ""
+assignees: ""
 ---
 
-## 👀 기능 설명
+## 📑 개요
 
-## 💁🏻‍♀️ 구현 사항
-###
-- [ ] todo
+## 💁🏻‍♀️ 작업 리스트
