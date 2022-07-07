@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "migu@naver.com",
+      "pw": "1234",
+      "nickname": "HyeonDoonge",
+      "profileFileName": "hyeondoonge.jpeg"
+    }
+  ],
+  "sessions": []
+}
