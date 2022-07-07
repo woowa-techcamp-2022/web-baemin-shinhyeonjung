@@ -1,3 +1,8 @@
+:root {
+  --color-baemin: #36c7cb;
+  --color-secondary: #b5b5b5;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +11,7 @@ html {
   display: flex;
   justify-content: center;
   background-color: white;
+  font-size: 15px;
 }
 
 body {

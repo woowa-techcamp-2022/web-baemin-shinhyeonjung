@@ -1,4 +1,34 @@
 extends layout
 
+mixin loginButton(filename, text)
+    button.platform-login-button
+        img(src=`/images/${filename}.svg`)
+        span=text
+
+
 block content
-    h2 로그인 페이지
+    section
+        button.close-button
+            img(src=`/images/cancel.svg`)
+    section
+        form.login-form
+            input(type='text', placeholder='아이디 또는 이메일')
+            input(type='text', placeholder='비밀번호')
+            button.login-button 로그인 
+    section.finder-container
+        div.finder
+            button.id-finder-button 아이디 찾기
+            div.divide-line
+            button.pw-finder-button 비밀번호 찾기
+
+    section.login-button-container
+        div
+            +loginButton('facebook', '페이스북으로 로그인')
+        div
+            +loginButton('naver-logo', '네이버로 로그인')
+        div
+            +loginButton('apple-logo', 'Apple로 로그인')
+    section.signup-link
+        span 혹시 배달의 민족이 처음이신가요?
+        a(href='#') 회원가입
+    link(rel='stylesheet' href="/stylesheets/login.css") 
