@@ -1,0 +1,118 @@
+section {
+  background-color: white;
+}
+
+body > section {
+  width: 100%;
+}
+
+.page-title {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.commercial-advertisement {
+  height: fit-content;
+}
+
+.user {
+  height: 35%;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.user-profile {
+  font-size: large;
+  display: flex;
+  gap: 10px;
+}
+
+.user-profile > * {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile .name {
+  font-size: large;
+}
+
+.user {
+  display: grid;
+  grid-template-rows: 30% 70%;
+}
+
+.user-menu .menu-items {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 0;
+}
+
+.user-menu .menu-item {
+  border: 0.5px solid gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu .menu-item section {
+  height: 60%;
+  display: grid;
+  grid-template-rows: 60% 40%;
+  place-items: center;
+}
+
+.user-menu .menu-item section .text {
+  color: gray;
+}
+
+.reuse-advertisement {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 10px 0px;
+}
+
+.reuse-advertisement .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  font-size: large;
+  color: #73d38e;
+}
+
+.more-menu {
+  height: 30%;
+}
+
+.more-menu .menu-item {
+  padding: 20px;
+  border-top: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.more-menu .menu-item .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.more-menu .menu-item .title {
+  font-size: large;
+}
+
+.more-menu .menu-item .detail {
+  color: gray;
+}
