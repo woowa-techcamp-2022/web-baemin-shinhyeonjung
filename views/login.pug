@@ -5,15 +5,19 @@ mixin loginButton(filename, text)
         img(src=`/images/${filename}.svg`)
         span=text
 
-
 block content
     section
         button.close-button
             img(src=`/images/cancel.svg`)
     section
-        form.login-form
-            input(type='text', placeholder='아이디 또는 이메일')
-            input(type='text', placeholder='비밀번호')
+        form.login-form(method="post", name="loginForm")
+            div.id-input-container
+                input(type='text', placeholder='아이디 또는 이메일', name='id').id-input
+                span.id-alert 항목을 입력하세요
+            
+            div.pw-input-container
+                input(type='text', placeholder='비밀번호', name='pw').pw-input 
+                span.pw-alert 항목을 입력하세요
             button.login-button 로그인 
     section.finder-container
         div.finder
@@ -32,3 +36,6 @@ block content
         span 혹시 배달의 민족이 처음이신가요?
         a(href='#') 회원가입
     link(rel='stylesheet' href="/stylesheets/login.css") 
+    script(src="/js/login.js") 
+
+    // css, js 소스를 어디 위치시켜야하는지 잘 몰라서 일단 아무데나

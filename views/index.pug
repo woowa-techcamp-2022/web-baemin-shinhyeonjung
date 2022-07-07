@@ -4,18 +4,11 @@ mixin moveButton ()
   a(href="#")
     img(src='/images/arrow.png', width='50%')
 
-mixin userMenuItem (filename, title, isNew) 
-  if isNew
-    li.menu-item
-      section
-        img(src=`/images/${filename}`, width='50%')
-        img(src=`/images/new.png`, width='50%')
-        span.text=title
-  else
-    li.menu-item
-      section
-        img(src=`/images/${filename}`, width='50%')
-        span.text=title
+mixin userMenuItem (filename, title) 
+  li.menu-item
+    section
+      img(src=`/images/${filename}`, width='50%')
+      span.text=title
 
 mixin menu-item(title, detail, isNew)
   if isNew 
@@ -42,8 +35,12 @@ block content
   section.user
     section.user-info
       section.user-profile
-        img(src='/images/profile.png', width='30%')
-        a(href='http://localhost:3000/login').name 로그인을 해주세요
+        if nickname
+          img(src=`/images/${profileFileName}`, width='70px')
+          span #{nickname}  
+        else
+          img(src=`/images/profile.png`, width='70px')
+          a(href='http://localhost:3000/login').name 로그인을 해주세요
       section 
         +moveButton()
     section.user-menu
@@ -68,4 +65,3 @@ block content
       +menu-item('공지사항')
       +menu-item('배민커넥트 지원')
   
-  script(src='./js/functions.js')
