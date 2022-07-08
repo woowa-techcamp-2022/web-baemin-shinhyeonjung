@@ -1,0 +1,101 @@
+body {
+  padding: 10px;
+  background-color: white;
+}
+
+body > * {
+  display: grid;
+}
+
+h3 {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  position: relative;
+}
+
+header .close-button {
+  width: 2rem;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+}
+
+.agree-check-box {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+}
+
+.check-boxes {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.check-boxes > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.check-boxes > div > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.check-boxes > div:last-child {
+  margin-bottom: 1rem;
+}
+
+.hr {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
+
+.more-button {
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+
+.next-button {
+  width: 100%;
+  background-color: var(--color-baemin);
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.radio-button-container {
+  width: 100%;
+  height: 10%;
+  font-size: large;
+  padding: 20px;
+  background-color: #efefef;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.radio-button-container img {
+  width: 20%;
+  position: absolute;
+  right: 0;
+}

@@ -1,0 +1,82 @@
+extends layout
+
+mixin agreeRadioButton(title)
+    input(type='radio' name='age')
+    label
+        strong #{title}
+
+mixin agreeCheckBox(title, isOptional, more, allCheck)
+    if allCheck
+        div
+            input(type="checkbox", name='all-check').agree-check-box.all-check.option
+            strong 전체 동의
+    else
+        if more
+            if isOptional
+                div
+                    input(type="checkbox").agree-check-box.option
+                    span #{title} (선택)
+                div
+                    button.more-button
+                        img(src='/images/arrow.png')
+            else
+                div
+                    input(type="checkbox").agree-check-box
+                    span #{title}
+                div
+                    button.more-button
+                        img(src='/images/arrow.png')
+        else
+            if isOptional
+                div 
+                    input(type="checkbox").agree-check-box.option
+                    span #{title} (선택)
+            else
+                div
+                    input(type="checkbox").agree-check-box
+                    span #{title}
+
+block content
+    section.page-header-container
+        header
+            button.close-button
+                img(src='/images/cancel.svg')
+            h3.title 회원가입
+    h1.info 어서오세요
+    h1.info 약관동의가 필요해요
+    
+
+    div.check-boxes
+        div
+            +agreeCheckBox('전체 동의', false, true, true)
+    div.hr
+
+    div.check-boxes
+        div
+            +agreeCheckBox('배달의민족 이용약관 동의', false, true, false)
+        div
+            +agreeCheckBox('전자금융거래 이용약관 동의', false, true, false)
+        div
+            +agreeCheckBox('개인정보 수집이용 동의', false, true, false)
+        div
+            +agreeCheckBox('개인정보 제3자 제공 동의', true, true, false)
+        div
+            +agreeCheckBox('마케팅 정보 메일, SMS수신 동의', true, false, false)
+    div.hr
+    div.radio-button-container
+        +agreeRadioButton('만 14세 이상입니다.')
+        img(src='/images/under.png')
+    div.radio-button-container
+        +agreeRadioButton('만 14세 미만입니다.')
+        img(src='/images/under.png')
+    //- div
+    //-     button(type="radio")
+    //-     strong 만 14세 이상입니다.
+    //- div
+    //-     button(type="radio")
+    //-     strong 만 14세 미만입니다.
+
+    button.next-button 다음으로
+
+    link(rel='stylesheet', href='/stylesheets/signupAgree.css')
+    script(src='/js/signupAgree.js')
