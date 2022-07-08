@@ -45,11 +45,11 @@ const clickLoginButonHandler = async (event) => {
       // 로그인 처리 에러
       alert(json.error);
     } else {
-      location.href = 'http://localhost:3000/';
+      location.href = 'https://web-baemin-shinhyeonjung.herokuapp.com/';
     }
   } catch (error) {
     console.log(error);
-    location.href = 'http://localhost:3000/error';
+    location.href = 'https://web-baemin-shinhyeonjung.herokuapp.com//error';
   }
 };
 
