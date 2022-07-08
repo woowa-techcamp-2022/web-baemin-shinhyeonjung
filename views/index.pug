@@ -1,0 +1,67 @@
+extends layout
+
+mixin moveButton ()
+  a(href="#")
+    img(src='/images/arrow.png', width='50%')
+
+mixin userMenuItem (filename, title) 
+  li.menu-item
+    section
+      img(src=`/images/${filename}`, width='50%')
+      span.text=title
+
+mixin menu-item(title, detail, isNew)
+  if isNew 
+    li.menu-item
+      section.content
+        section
+          span.title=title
+          img(src=`/images/new.png`, width='8%')
+        span.detail=detail
+      +moveButton()
+  else
+    li.menu-item
+      section.content
+        span.title=title
+        span.detail=detail
+      +moveButton()
+
+block content
+  section.page-title
+    header 
+      h3 My 배민
+  section.commercial-advertisement
+    img(src='/images/banner.png', width='100%')
+  section.user
+    section.user-info
+      section.user-profile
+        if nickname
+          img(src=`/images/${profileFileName}`, width='70px')
+          span #{nickname}  
+        else
+          img(src=`/images/profile.png`, width='70px')
+          a(href='http://localhost:3000/login').name 로그인을 해주세요
+      section 
+        +moveButton()
+    section.user-menu
+      ul.menu-items
+        +userMenuItem('point.png', '포인트')
+        +userMenuItem('coupon.png', '쿠폰함')
+        +userMenuItem('present.png', '선물함')
+        +userMenuItem('heart.png', '찜')
+        +userMenuItem('order.png', '주문내역')
+        +userMenuItem('review.png', '리뷰관리')
+  section.reuse-advertisement
+    section.content 
+      img(src='/images/sproud.png', width='20%')
+      span.text 일회용품 덜 쓰기, 함께해요!
+    section 
+      a(href="#")
+          img(src='/images/arrow.png',  width='50%')
+  section.more-menu
+    ul.menu-items
+      +menu-item('배민페이 등록', '배민페이로 결제하면 최대 5.5% 배민포인트가 적립됩니다!', true)
+      +menu-item('가족계정 관리', '결제수단을 공유해 우리가족의 끼니를 챙겨주세요', true)
+      +menu-item('공지사항')
+      +menu-item('배민커넥트 지원')
+  

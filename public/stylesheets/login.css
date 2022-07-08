@@ -1,0 +1,127 @@
+body {
+  background-color: white;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 10% 30% 20% 30% 10%;
+}
+
+.close-button {
+  width: 2rem;
+  color: gray;
+  border: none;
+  background-color: transparent;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.login-form input {
+  font-size: large;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.login-form input::placeholder {
+  color: #b5b5b5;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--color-baemin);
+}
+
+.id-input-container,
+.pw-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.id-alert,
+.pw-alert {
+  visibility: hidden;
+  color: red;
+}
+
+.login-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.login-button {
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  font-size: large;
+  border: none;
+  padding: 10px;
+  background-color: var(--color-baemin);
+  border-radius: 10px;
+}
+
+.finder {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  height: 10%;
+  margin: 15px 0;
+}
+
+.finder button {
+  color: gray;
+  border: none;
+  background-color: transparent;
+}
+
+.finder .divide-line {
+  background-color: gainsboro;
+  width: 1px;
+  height: 1rem;
+}
+
+.platform-login-button {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 0px;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.platform-login-button {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 0px;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.platform-login-button img {
+  width: 1rem;
+}
+
+.signup-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.signup-link a {
+  color: var(--color-baemin);
+}
