@@ -49,7 +49,7 @@ const clickLoginButonHandler = async (event) => {
     }
   } catch (error) {
     console.log(error);
-    location.href = 'https://web-baemin-shinhyeonjung.herokuapp.com//error';
+    location.href = 'https://web-baemin-shinhyeonjung.herokuapp.com/error';
   }
 };
 
